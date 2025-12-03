@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-# 3. Definizione Modello Pydantic (per validazione dati API)
+# Definizione Modello Pydantic (per validazione dati API)
 class Partecipant(BaseModel):
 	Name: str
 	SurName: str

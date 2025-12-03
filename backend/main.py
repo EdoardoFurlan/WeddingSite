@@ -1,18 +1,12 @@
 from fastapi import FastAPI, HTTPException
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from .database import engine, SessionLocal
 import json
-import PartecipantDB
+from . import models, Partecipants
 
-# # 1. Configurazione Database SQLite
-# DATABASE_URL = "sqlite:///./wedding_data/wedding.db" # Nota il percorso cartella
-# engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
-# SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-# Base = declarative_base()
 
-# # Crea le tabelle all'avvio
-# Base.metadata.create_all(bind=engine)
+
+# Inizializza tutte le tabelle definite in models.py
+models.Base.metadata.create_all(bind=engine)
 
 # 4. Inizializzazione App
 app = FastAPI()

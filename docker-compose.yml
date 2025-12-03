@@ -9,7 +9,7 @@ services:
     ports:
       - "8000:8000" # da commentare 
     volumes:
-      - ./wedding_data:/app/wedding_data
+      - ./backend/wedding_data:/app/wedding_data
 
 
 
