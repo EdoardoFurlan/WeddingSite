@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from .database import engine, SessionLocal
 import json
-from . import models, Partecipants
+from . import models, partecipant
 
 
 
