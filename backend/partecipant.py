@@ -4,7 +4,7 @@ from pydantic import BaseModel
 class Partecipant(BaseModel):
 	Name: str
 	SurName: str
-    WillJoin: bool
+	WillJoin: bool
 	HowManyTotals: int
 	HowManyKids: int
 	Allergies: str
