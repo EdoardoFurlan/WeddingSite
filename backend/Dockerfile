@@ -4,8 +4,6 @@ FROM python:3.9-slim
 # Imposta la cartella di lavoro nel container
 WORKDIR /app
 
-
-
 # Copia i requirements e installa le dipendenze
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt

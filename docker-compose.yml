@@ -20,8 +20,13 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./frontend:/usr/share/nginx/html:ro
-      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    # Mappiamo la build di Flutter dentro Nginx
+    - ./flutter/build/web:/usr/share/nginx/html:ro
+    # Mappiamo la nuova config di Nginx
+    - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    # volumes:
+    #   - ./frontend:/usr/share/nginx/html:ro
+    #   - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf:ro
     depends_on:
       - backend # Nginx parte solo dopo il backend
 
