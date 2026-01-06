@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from .database import engine, SessionLocal
 import json
 from . import models
@@ -11,6 +12,13 @@ models.Base.metadata.create_all(bind=engine)
 
 # 4. Inizializzazione App
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # In produzione metti il tuo dominio specifico
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # 5. Endpoint API
 @app.get("/")

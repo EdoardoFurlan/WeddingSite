@@ -1,5 +1,16 @@
 services:
-
+# --- NGINX PROXY MANAGER ---
+  npm:
+    image: 'jc21/nginx-proxy-manager:latest'
+    container_name: wedding-proxy
+    restart: always
+    ports:
+      - '80:80'   # Traffico HTTP
+      - '443:443' # Traffico HTTPS
+      - '81:81'   # Pannello di controllo Admin
+    volumes:
+      - ./npm/data:/data
+      - ./npm/letsencrypt:/etc/letsencrypt
 
 # Container Python
   backend:
@@ -17,8 +28,8 @@ services:
     image: nginx:alpine
     container_name: wedding-frontend
     restart: always
-    ports:
-      - "80:80"
+    # ports:
+    #   - "80:80"
     volumes:
     # Mappiamo la build di Flutter dentro Nginx
     - ./flutter/build/web:/usr/share/nginx/html:ro
