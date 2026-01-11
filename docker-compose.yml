@@ -17,8 +17,8 @@ services:
     build: ./backend # Cerca il Dockerfile nella cartella backend
     container_name: wedding-backend
     restart: always
-    ports:
-      - "8000:8000" # da commentare 
+    # ports:
+      # - "8000:8000" # da commentare 
     volumes:
       - ./backend/wedding_data:/app/backend/wedding_data
 
