@@ -7,8 +7,7 @@ services:
     ports:
       - '80:80'   # Traffico HTTP
       - '443:443' # Traffico HTTPS
-      - '81:81'   # Pannello di controllo Admin  
-      - '8000:8000'   
+      - '81:81'   # Pannello di controllo Admin     
     volumes:
       - ./npm/data:/data
       - ./npm/letsencrypt:/etc/letsencrypt
