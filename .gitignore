@@ -3,3 +3,5 @@ venv/
 
 # Cache files
 __pycache__/
+
+wedding.db
