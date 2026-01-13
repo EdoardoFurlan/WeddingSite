@@ -7,7 +7,8 @@ services:
     ports:
       - '80:80'   # Traffico HTTP
       - '443:443' # Traffico HTTPS
-      - '81:81'   # Pannello di controllo Admin
+      - '81:81'   # Pannello di controllo Admin  
+      - '8000:8000'   # Traffico HTTP
     volumes:
       - ./npm/data:/data
       - ./npm/letsencrypt:/etc/letsencrypt
@@ -17,8 +18,8 @@ services:
     build: ./backend # Cerca il Dockerfile nella cartella backend
     container_name: wedding-backend
     restart: always
-    # ports:
-      # - "8000:8000" # da commentare 
+    ports:
+      - "8000:8000" # da commentare 
     volumes:
       - ./backend/wedding_data:/app/backend/wedding_data
 
