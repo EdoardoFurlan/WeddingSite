@@ -20,7 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 5. Endpoint API
+# 5. Endpoint API 
 @app.get("/")
 def read_root():
     return {"message": "API Matrimonio Funzionanti!"}
