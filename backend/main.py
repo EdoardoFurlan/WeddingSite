@@ -25,7 +25,7 @@ app.add_middleware(
 def read_root():
     return {"message": "API Matrimonio Funzionanti!"}
 
-@app.post("/partecipants/")
+@app.post("/api/partecipants/")
 def create_partecipant(partecipant: Partecipant):
     db = SessionLocal()
 
@@ -74,7 +74,7 @@ def create_partecipant(partecipant: Partecipant):
     return db_partecipant
 
 
-@app.get("/partecipants/")
+@app.get("/api/partecipants/")
 def read_guests():
     db = SessionLocal()
     guests = db.query(PartecipantDB).all()
