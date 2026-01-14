@@ -26462,7 +26462,7 @@ akQ:function akQ(a){this.a=a},
 akN:function akN(a){this.a=a},
 akO:function akO(a){this.a=a},
 akP:function akP(){},
-aQO(){var s,r,q,p,o,n=null,m=A.ew("http://34.122.221.12:8000",0,n),l=A.c([A.azJ(n)],t.Bm),k=new A.Kp(),j=new A.Kp(),i=A.un(!1,t.Xd),h=A.un(!1,t.k8),g=new A.Z_(A.c([],t.O)),f=new A.ZD(m,g,k,j,i,h,!0)
+aQO(){var s,r,q,p,o,n=null,m=A.ew("/api/",0,n),l=A.c([A.azJ(n)],t.Bm),k=new A.Kp(),j=new A.Kp(),i=A.un(!1,t.Xd),h=A.un(!1,t.k8),g=new A.Z_(A.c([],t.O)),f=new A.ZD(m,g,k,j,i,h,!0)
 f.a2o(n,m,n,k,j,B.oj,l)
 s=A.azJ(f)
 if($.a1==null){m=t.GA
