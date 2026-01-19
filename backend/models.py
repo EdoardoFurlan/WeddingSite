@@ -1,5 +1,5 @@
 
-from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Boolean, DateTime
 from .database import Base # Importa la Base dal file appena creato
 from datetime import datetime
 
