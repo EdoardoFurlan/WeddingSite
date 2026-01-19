@@ -45,6 +45,7 @@ def create_partecipant(partecipant: Partecipant):
         db_partecipant.Allergies = partecipant.Allergies
         db_partecipant.AllergiesNotes = partecipant.AllergiesNotes
         db_partecipant.Notes = partecipant.Notes
+        db_partecipant.updated_at = datetime.now()
         # L'oggetto è già "dirty" (modificato) in SQLAlchemy. Non serve db.add().
         
     else:
@@ -58,6 +59,7 @@ def create_partecipant(partecipant: Partecipant):
             Allergies = partecipant.Allergies,
             AllergiesNotes = partecipant.AllergiesNotes,
             Notes = partecipant.Notes,
+            updated_at = datetime.now()
         )
         db.add(db_partecipant)
 
