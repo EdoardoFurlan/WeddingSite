@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from datetime import datetime
+from typing import Optional
 
 # Definizione Modello Pydantic (per validazione dati API)
 class Partecipant(BaseModel):
