@@ -11,4 +11,4 @@ class Partecipant(BaseModel):
 	Allergies: str
 	AllergiesNotes: str
 	Notes: str
-	updated_at: datetime | None = None
+	updated_at: typing.Union[datetime, None] = None
