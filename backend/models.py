@@ -1,6 +1,7 @@
 
 from sqlalchemy import Column, Integer, String, Boolean
 from .database import Base # Importa la Base dal file appena creato
+from datetime import datetime
 
 # Definizione Modello DB (Tabella Ospiti)
 class PartecipantDB(Base):

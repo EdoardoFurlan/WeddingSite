@@ -5,6 +5,7 @@ import json
 from . import models
 from .models import PartecipantDB
 from .partecipant import Partecipant
+from datetime import datetime
 
 
 # Inizializza tutte le tabelle definite in models.py
