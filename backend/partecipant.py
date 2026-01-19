@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 from datetime import datetime
-from typing import Optional
 
 # Definizione Modello Pydantic (per validazione dati API)
 class Partecipant(BaseModel):
@@ -12,4 +11,4 @@ class Partecipant(BaseModel):
 	Allergies: str
 	AllergiesNotes: str
 	Notes: str
-	updated_at: Optional[datetime] = None
+	updated_at: datetime | None = None
