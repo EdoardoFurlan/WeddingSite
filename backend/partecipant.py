@@ -10,3 +10,4 @@ class Partecipant(BaseModel):
 	Allergies: str
 	AllergiesNotes: str
 	Notes: str
+    updated_at: Optional[datetime] = None
