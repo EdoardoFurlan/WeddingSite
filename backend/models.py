@@ -1,8 +1,7 @@
+from sqlalchemy import Column, Integer, String, Boolean, DateTime
+from datetime import datetime
+from .database import Base
 
-from sqlalchemy import Column, Integer, String, Boolean
-from .database import Base # Importa la Base dal file appena creato
-
-# Definizione Modello DB (Tabella Ospiti)
 class PartecipantDB(Base):
     __tablename__ = "Partecipants"
     id = Column(Integer, primary_key=True, index=True)
@@ -14,4 +13,5 @@ class PartecipantDB(Base):
     Allergies = Column(String, default='')
     AllergiesNotes = Column(String, default='')
     Notes = Column(String, default='')
-
+    # Usa questa versione per debuggare:
+    updated_at = Column(DateTime, default=datetime.now, onupdate=datetime.now)
